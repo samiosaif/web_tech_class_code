@@ -1,0 +1,139 @@
+
+
+CREATE DATABASE IF NOT EXISTS your_database_name;
+USE your_database_name;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+INSERT INTO users (username, password) VALUES
+('user1', 'password1'),
+('user2', 'password2'),
+('user3', 'password3');
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="view/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="../controller/loginController.php" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Center align vertically */
+}
+
+
+input[type="text"],
+input[type="password"],
+button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+<?php
+session_start();
+
+include_once '../model/userModel.php';
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    $userModel = new UserModel();
+    $user = $userModel->getUser($username, $password);
+
+    if ($user) {
+        $_SESSION["username"] = $username;
+        header("Location: ../index.php");
+        exit();
+    } else {
+        echo "Invalid username or password";
+    }
+}
+?>
+
+
+<?php
+include_once 'db.php';
+
+class UserModel {
+    public function getUser($username, $password) {
+        $db = new DB();
+        $conn = $db->connect();
+
+        $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+        $result = $conn->query($sql);
+
+        if ($result && $result->num_rows > 0) {
+            return $result->fetch_assoc();
+        } else {
+            return false;
+        }
+    }
+}
+?>
+
+
+<?php
+class DB {
+    private $servername = "localhost";
+    private $username = "your_username";
+    private $password = "your_password";
+    private $dbname = "your_database";
+
+    public function connect() {
+        $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        return $conn;
+    }
+}
+?>
+
