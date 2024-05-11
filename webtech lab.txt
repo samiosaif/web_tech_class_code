@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LOGIN PAGE</title>
+</head>
+
+<body><form>
+  <fieldset>
+    <legend>LOGIN</legend>
+<label for="username">User Name:</label>
+  <input type="Text" name="username"><br><br>
+  <label for="Password">Password:</label>
+  <input type="Password" name="Password"><br><br>
+  <hr>
+  <label for="remember me">Remember Me:</label>
+    <input type="checkbox"><br><br>
+    <button>Submit</button>
+</fieldset></form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CHANGE PASSWORD </title>
+</head>
+
+<body><form><fieldset>
+	<legend>CHANGE PASSWORD</legend>
+	<label for="Current Password">Current Password:</label>
+  <input type="Password" name="Current Password"><br><br>
+  <label style="color: Green" for="New Password">New Password:</label>
+  <input type="New Password" name="New Password"><br><br>
+  
+  <label style="color: Red"; for="Retype New Password">Retype New Password:</label>
+    <input type="Password" name="Retype New Pass"><br><br>
+    <hr>
+    <button>Submit</button>
+
+</fieldset>
+	
+</form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<tittle>Registration</tittle>
+</head>
+<body>
+First Name: <input types="text" name=""><br><br>
+Last Name: <input types="text" name=""><br><br>
+Email: <input types="text" name=""><br>
+(Your email adress will be your user name )<br>
+Re-Type: <input types="text" name=""><br><br>
+Password: <input types="text" name=""><br>
+(Min. 8 character,1 number, case senssitive)<br>
+Retype Password: <input types="text" name=""><br><br>
+<label for="State"> State:</label>
+<select name="State" id="States">
+<option value="Dhaka">Dhaka</option>
+<option value="Raj">Raj</option>
+<option value="CTG">CTG</option>
+<option value="Sylhet">Sylhet</option>
+</select><br>
+Zip code: <input types="text" name=""><br><br>
+Phone: <input types="text" name="">
+<select name="Mobile" id="Mobile">
+<option value="Mobile">Mobile</option>
+</select><br>
+<label for="Month"> Date of birth:</label>
+<select name="Month" id="Month">
+<option value="Month">Month</option>
+</select>
+<select name="Day" id="Day">
+<option value="Day">Day</option>
+</select>
+<select name="Year" id="Year">
+<option value="Year">Year</option>
+</select><br>
+<label for="Gender"> Gender:</label>
+<select name="Gender" id="Gender">
+<option value="Male">Male</option>
+</select><br>
+
+<label for="Gender"> Sequrity question:</label>
+<select name="Gender" id="Gender">
+<option value="Choose a sequrity question">Choose a sequrity question</option>
+</select><br>
+Sequrity Answer: <input types="text" name=""><br><br>
+
+
+<h3>Personal Information</h3>
+First Name: <input types="text" name=""><br><br>
+Last Name: <input types="text" name=""><br><br>
+<label for="Month"> Date of birth:</label>
+<select name="Month" id="Month">
+<option value="Month">Month</option>
+</select>
+<select name="Day" id="Day">
+<option value="Day">Day</option>
+</select>
+<select name="Year" id="Year">
+<option value="Year">Year</option>
+</select><br>
+<label for="Gender"> Gender:</label>
+<select name="Gender" id="Gender">
+<option value="Male">Male</option>
+</select><br>
+
+
+<h3>Account Information</h3>
+Email: <input types="text" name=""><br>
+(Your email adress will be your user name )<br>
+Re-Type: <input types="text" name=""><br><br>
+Password: <input types="text" name=""><br>
+(Min. 8 character,1 number, case senssitive)<br>
+Retype Password: <input types="text" name=""><br><br>
+<label for="Gender"> Sequrity question:</label>
+<select name="Gender" id="Gender">
+<option value="Choose a sequrity question">Choose a sequrity question</option>
+</select><br>
+Sequrity Answer: <input types="text" name=""><br><br>
+
+<h3>Personal Information</h3>
+Address: <input types="text" name=""><br><br>
+City: <input types="text" name=""><br><br>
+<label for="State"> State:</label>
+<select name="State" id="States">
+<option value="Dhaka">Dhaka</option>
+<option value="Raj">Raj</option>
+<option value="CTG">CTG</option>
+<option value="Sylhet">Sylhet</option>
+</select><br>
+Zip code: <input types="text" name=""><br><br>
+Phone: <input types="text" name="">
+<select name="Mobile" id="Mobile">
+<option value="Mobile">Mobile</option>
+</select><br>
+<button>Submit</button>
+</body>
+</html>
