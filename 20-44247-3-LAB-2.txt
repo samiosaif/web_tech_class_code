@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form method="get">
+	ID:<input type="Text" name="id"><br>
+	Password:<input type="Password" name="password"><br>
+	<button name="log">Login</button>
+	<button name="reg">Reg</button>
+	
+</form>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+<fieldset>
+	<legend>Registration</legend>
+	<label>First Name :</label>
+	<input type="Text" name="Name">
+	<br><br>
+	<label>Last Name :</label>
+	<input type="Text" name="Name">
+	<br><br>
+<label>Email :</label>
+	<input type="Text" name="Name">
+	<br><br>
+	<label>Re-type Email :</label>
+	<input type="Text" name="Name">
+	<br><br>
+	<label>Password :</label>
+	<input type="Password" name="Name">
+	<br><br>
+	<label>Re-type Password :</label>
+	<input type="Password" name="Name">
+	<br><br>
+	<label>Address :</label>
+	<input type="Text" name="Name">
+	<br><br>
+	<label>City :</label>
+	<input type="Text" name="Name">
+	<br><br>
+	<label>State :</label>
+	<input type="Text" name="Name">
+	<br><br>
+	<label>Zip Code :</label>
+	<input type="Number" name="Name">
+	<br><br>
+	<label>Phone :</label>
+	<input type="Number" name="Name">
+	<br><br>
+	<label>Date Of Birth :</label>
+	<input type="Number" name="Name">
+	<br><br>
+	<label>Gender :</label>
+	<input type="Text" name="Name">
+	<br><br>
+	<label>Security Question :</label>
+	<input type="Text" name="Name">
+	<br><br>
+	<label>Security Answer :</label>
+	<input type="Text" name="Name">
+	<br><br>
+
+</fieldset>
+</html>
